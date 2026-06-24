@@ -83,4 +83,4 @@ articles.forEach(article => {
   });
 });
 
-console.log('✨ Portfólio carregado com sucesso!');
+console.log('BOMBOCLAT');
