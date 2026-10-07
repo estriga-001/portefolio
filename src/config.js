@@ -1,7 +1,7 @@
 // Edit only this object to personalise the portfolio.
 export const profile = {
-  name: '[MY NAME]',
-  initials: '[INITIALS]',
+  name: 'Miguel Estriga',
+  initials: 'ME',
   email: 'miguelestrigaepic@gmail.com',
   linkedin: 'https://www.linkedin.com/in/mestriga1',
   github: 'https://github.com/estriga-001',
