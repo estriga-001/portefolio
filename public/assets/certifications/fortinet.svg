@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title">
+  <title id="title">Fortinet placeholder mark</title>
+  <rect x="1" y="1" width="62" height="62" fill="#0a1016" stroke="#24434c"/>
+  <path d="M14 19h36M14 32h25M14 45h36" stroke="#00e5ff" stroke-width="2"/>
+  <circle cx="45" cy="32" r="5" fill="none" stroke="#8b5cf6" stroke-width="2"/>
+</svg>

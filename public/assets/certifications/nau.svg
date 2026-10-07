@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title">
+  <title id="title">NAU placeholder mark</title>
+  <rect x="1" y="1" width="62" height="62" fill="#0a1016" stroke="#24434c"/>
+  <path d="M17 43V21l15 22V21m8 0v14c0 10 12 10 12 0V21" fill="none" stroke="#00e5ff" stroke-width="2"/>
+</svg>

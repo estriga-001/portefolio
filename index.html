@@ -1,77 +1,268 @@
-<!DOCTYPE html>
-<html lang="pt-PT">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>O Meu Portefólio</title>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Computer Engineering student focused on cybersecurity, Red Team, networking and network security." />
+    <meta name="theme-color" content="#05070a" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="[MY NAME] — Cybersecurity & Networking" />
+    <meta property="og:description" content="Computer Engineering student focused on cybersecurity, Red Team, networking and network security." />
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <title>[MY NAME] — Cybersecurity & Networking</title>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
 
-  <link rel="stylesheet" href="./css/style.css">
-</head>
-<body>
+    <div class="loader" data-loader role="status" aria-live="polite">
+      <div class="loader__content">
+        <div class="loader__meta"><span>Initializing network</span><span data-loader-value>000%</span></div>
+        <div class="loader__track" aria-hidden="true"><span data-loader-bar></span></div>
+        <p>Establishing secure visual layer</p>
+      </div>
+    </div>
 
-  <header>
-    <h1>Miguel</h1>
-    <p>Estudante 2º ano de Engenheiro Informática e de Computadores | Redes de Computadores | Microcontroladores</p>
-  </header>
+    <div class="visual-layer" aria-hidden="true">
+      <canvas id="webgl-canvas" tabindex="-1"></canvas>
+      <div class="visual-layer__wash"></div>
+      <div class="visual-layer__grid"></div>
+      <div class="visual-layer__noise"></div>
+    </div>
 
-  <nav>
-    <a href="#sobre">Sobre mim</a>
-    <a href="#projetos">Projetos</a>
-    <a href="#skills">Skills</a>
-    <a href="#contacto">Contacto</a>
-  </nav>
-
-  <section id="sobre">
-    <h2>Sobre mim</h2>
-    <p>Sou estudante/engenheiro informático com interesse em redes, cibersegurança e scripting.</p>
-  </section>
-
-  <section id="projetos">
-    <h2>Projetos</h2>
-
-    <article>
-      <h3>Projeto 1</h3>
-      <p>Projetos realizados ao longo do semestre no intuito da cadeira de computação móvel.</p>
-      <a href="https://github.com/estriga-001/CM" target="_blank">Ver código</a>
-    </article>
-
-    <article>
-      <h3>Projeto 2</h3>
-      <p>Outro projeto interessante demonstrando competências em desenvolvimento web, design responsivo e boas práticas.</p>
-      <a href="https://github.com/estriga-001" target="_blank">Ver código</a>
-    </article>
-  </section>
-
-  <section id="skills">
-    <h2>Skills</h2>
-    <p>
-      <span class="skill-tag">Configuração de Switches e Routers</span>
-      <span class="skill-tag">Arduino e PICkit</span>
-      <span class="skill-tag">Programação em C</span>
-      <span class="skill-tag">Python</span>
-      <span class="skill-tag">SQL</span>
-      <span class="skill-tag">Git</span>
-      <span class="skill-tag">GitHub</span>
-      <span class="skill-tag">Docker</span>
-    </p>
-  </section>
-
-  <section id="contacto">
-    <h2>Contacto</h2>
-    <p>Email: <a href="mailto:teuemail@email.com">miguelestriga.dev@gmail.com</a></p>
-    <p>GitHub: <a href="https://github.com/estriga-001" target="_blank">github.com/estriga-001</a></p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/mestriga1/" target="_blank">LinkedIn</a></p>
-    <p>
-      <a href="./assets/cv/CV_MiguelEstriga.pdf" target="_blank">
-        Ver CV
+    <header class="site-header" data-header>
+      <a class="brand" href="#hero" aria-label="Go to the top">
+        <span class="brand__bracket">[</span><span data-profile-text="initials">INITIALS</span><span class="brand__bracket">]</span>
       </a>
-    </p>
-  </section>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation" aria-label="Open navigation" data-nav-toggle>
+        <span></span><span></span>
+      </button>
+      <nav class="primary-nav" id="primary-navigation" aria-label="Primary navigation" data-nav-menu>
+        <a href="#about" data-nav-link>About</a>
+        <a href="#skills" data-nav-link>Skills</a>
+        <a href="#certifications" data-nav-link>Certifications</a>
+        <a href="#projects" data-nav-link>Projects</a>
+        <a href="#contact" data-nav-link>Contact</a>
+      </nav>
+      <div class="header-status" aria-label="Current focus"><span class="header-status__pulse"></span><span>Focus / security + networks</span></div>
+    </header>
 
-  <footer>
-    <p>&copy; 2025 Miguel - Todos os direitos reservados |</p>
-  </footer>
+    <aside class="scroll-index" aria-label="Page sections" data-scroll-index>
+      <span class="scroll-index__line"><span data-progress-line></span></span>
+      <a href="#hero" class="is-active" data-progress-link><span>01</span><em>Intro</em></a>
+      <a href="#about" data-progress-link><span>02</span><em>About</em></a>
+      <a href="#focus" data-progress-link><span>03</span><em>Focus</em></a>
+      <a href="#skills" data-progress-link><span>04</span><em>Skills</em></a>
+      <a href="#networking" data-progress-link><span>05</span><em>Lab</em></a>
+      <a href="#certifications" data-progress-link><span>06</span><em>Proof</em></a>
+      <a href="#projects" data-progress-link><span>07</span><em>Work</em></a>
+      <a href="#contact" data-progress-link><span>08</span><em>Connect</em></a>
+    </aside>
 
-  <script src="./js/script.js"></script>
-</body>
+    <main id="main-content">
+      <section class="section hero" id="hero" data-scene="hero" data-section>
+        <div class="section__frame hero__layout">
+          <div class="hero__copy">
+            <p class="eyebrow reveal-item"><span><b data-profile-text="name">[MY NAME]</b> / Portfolio 2026</span><span>Computer Engineering / 03</span></p>
+            <h1 class="hero__title" aria-label="I study the systems between a packet and a breach.">
+              <span class="title-line"><span>I study the systems</span></span>
+              <span class="title-line title-line--indent"><span>between a packet</span></span>
+              <span class="title-line"><span>and a <em>breach.</em></span></span>
+            </h1>
+            <div class="hero__intro reveal-item">
+              <div class="hero__statement">
+                <p>Third-year Computer Engineering student focused on cybersecurity, networks and offensive security.</p>
+                <ul aria-label="Primary areas"><li>Cybersecurity</li><li>Networking</li><li>Red Team</li></ul>
+              </div>
+              <div class="hero__actions">
+                <a class="button button--primary magnetic" href="#focus">Explore my focus</a>
+                <a class="button button--quiet magnetic" href="#contact">Contact me</a>
+              </div>
+            </div>
+          </div>
+          <aside class="signal-card reveal-item" aria-label="Profile snapshot">
+            <div class="signal-card__head"><span>Signal profile</span><span class="live-label"><i></i> Online</span></div>
+            <dl>
+              <div><dt>Learning vector</dt><dd>Red Team / Offensive Security</dd></div>
+              <div><dt>Operating layer</dt><dd>Network Infrastructure</dd></div>
+              <div><dt>Environment</dt><dd>Linux / Cisco IOS</dd></div>
+              <div><dt>Location</dt><dd data-profile-text="location">[LOCATION]</dd></div>
+            </dl>
+            <div class="signal-card__trace" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></div>
+          </aside>
+          <div class="scroll-cue reveal-item" aria-hidden="true"><span>Scroll to traverse</span><i></i></div>
+        </div>
+      </section>
+
+      <section class="section about" id="about" data-scene="about" data-section>
+        <div class="section__frame split-layout">
+          <header class="section-heading">
+            <p class="section-kicker"><span>02</span> About</p>
+            <h2 class="reveal-heading">Built from the <span class="accent-text">wire up.</span></h2>
+          </header>
+          <div class="about__content content-panel reveal-panel">
+            <p class="lead">I’m a third-year Computer Engineering student at Escola Superior Náutica with a strong interest in cybersecurity, networking and offensive security.</p>
+            <p>My background combines academic knowledge with hands-on laboratory experience configuring Cisco network infrastructure, working with routing and switching technologies, Linux environments, and analysing network traffic with Wireshark.</p>
+            <p>I’m particularly interested in Red Team methodologies, network security, and understanding how systems behave — and how they can be broken, analysed and secured.</p>
+            <dl class="fact-grid">
+              <div><dt>03</dt><dd>Academic year</dd></div>
+              <div><dt>Dual</dt><dd>Security + networks</dd></div>
+              <div><dt>Lab</dt><dd>Practical experience</dd></div>
+            </dl>
+          </div>
+        </div>
+      </section>
+
+      <section class="section focus" id="focus" data-scene="focus" data-section>
+        <div class="section__frame">
+          <header class="section-heading section-heading--wide">
+            <p class="section-kicker"><span>03</span> Core focus</p>
+            <h2 class="reveal-heading">Three layers. <span class="muted">One system.</span></h2>
+            <p class="section-intro">I’m developing an end-to-end understanding of infrastructure: how it communicates, how it fails, and how an adversary might approach it.</p>
+          </header>
+          <div class="focus-grid">
+            <article class="focus-card reveal-card">
+              <div class="focus-card__meta"><span>01</span><span>Attack surface</span></div>
+              <div class="focus-card__icon" aria-hidden="true"><span></span></div>
+              <h3>Offensive<br />Security</h3>
+              <p>An active area of study centred on Red Team thinking, security testing, vulnerabilities, and understanding systems from an adversarial perspective.</p>
+              <ul aria-label="Offensive security topics"><li>Red Team interest</li><li>Security testing</li><li>Attack surfaces</li></ul>
+            </article>
+            <article class="focus-card reveal-card">
+              <div class="focus-card__meta"><span>02</span><span>Transport layer</span></div>
+              <div class="focus-card__icon focus-card__icon--route" aria-hidden="true"><span></span></div>
+              <h3>Network<br />Engineering</h3>
+              <p>Building and diagnosing connected systems with TCP/IP, routing, switching, Cisco IOS, and physical network infrastructure.</p>
+              <ul aria-label="Networking topics"><li>TCP/IP</li><li>Routing + switching</li><li>Cisco IOS</li></ul>
+            </article>
+            <article class="focus-card reveal-card">
+              <div class="focus-card__meta"><span>03</span><span>Observation layer</span></div>
+              <div class="focus-card__icon focus-card__icon--pulse" aria-hidden="true"><span></span></div>
+              <h3>Network<br />Analysis</h3>
+              <p>Reading packet-level behaviour with Wireshark to inspect protocols, trace network traffic, and investigate connectivity problems.</p>
+              <ul aria-label="Network analysis topics"><li>Wireshark</li><li>Packet analysis</li><li>Troubleshooting</li></ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section skills" id="skills" data-scene="skills" data-section>
+        <div class="section__frame split-layout">
+          <header class="section-heading section-heading--sticky">
+            <p class="section-kicker"><span>04</span> Capabilities</p>
+            <h2 class="reveal-heading">A growing technical <span class="accent-text">toolset.</span></h2>
+            <p class="section-intro">Skills developed through coursework and practical laboratories — presented without arbitrary proficiency scores.</p>
+          </header>
+          <div class="skill-stack" data-skill-stack>
+            <article class="skill-group reveal-panel"><div class="skill-group__number">01 / 04</div><div><h3>Networking</h3><ul><li>Cisco IOS</li><li>Cisco Routers</li><li>Cisco Switches</li><li>TCP/IP</li><li>Routing</li><li>Switching</li><li>Network Troubleshooting</li></ul></div></article>
+            <article class="skill-group reveal-panel"><div class="skill-group__number">02 / 04</div><div><h3>Cybersecurity</h3><ul><li>Cybersecurity Fundamentals</li><li>Network Security</li><li>Red Team Interest</li><li>Offensive Security Interest</li><li>Security Awareness</li></ul></div></article>
+            <article class="skill-group reveal-panel"><div class="skill-group__number">03 / 04</div><div><h3>Tools</h3><ul><li>Wireshark</li><li>Linux</li><li>Cisco Networking Equipment</li></ul></div></article>
+            <article class="skill-group reveal-panel"><div class="skill-group__number">04 / 04</div><div><h3>Systems</h3><ul><li>Linux Environments</li><li>Network Environments</li></ul></div></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section networking" id="networking" data-scene="networking" data-section>
+        <div class="section__frame">
+          <header class="section-heading section-heading--wide networking__heading">
+            <p class="section-kicker"><span>05</span> Hands-on networking</p>
+            <h2 class="reveal-heading">Beyond the <span class="muted">simulation.</span></h2>
+            <p class="section-intro">Practical laboratory experience working directly with Cisco networking equipment — connecting, configuring, testing, and troubleshooting real network topologies.</p>
+          </header>
+          <div class="topology-panel reveal-panel">
+            <div class="topology-panel__status"><span>LAB_TOPOLOGY / 01</span><span><i></i> Links active</span></div>
+            <div class="topology" aria-label="Diagram showing a PC connected to a switch, router and network">
+              <div class="topology__node"><span>01</span><strong>PC</strong><small>Endpoint</small></div><span class="topology__link"><i></i></span>
+              <div class="topology__node"><span>02</span><strong>SW</strong><small>Switch</small></div><span class="topology__link"><i></i></span>
+              <div class="topology__node"><span>03</span><strong>RTR</strong><small>Router</small></div><span class="topology__link"><i></i></span>
+              <div class="topology__node topology__node--network"><span>04</span><strong>NET</strong><small>Network</small></div>
+            </div>
+            <div class="topology-panel__telemetry"><span>TCP/IP</span><span>PORT 443</span><span>PACKET 0x04</span><span>RTT 12ms</span></div>
+          </div>
+          <div class="lab-grid">
+            <article class="lab-item reveal-card"><span>01</span><h3>Physical infrastructure</h3><p>Connecting and setting up routers, switches, and endpoints in laboratory environments.</p></article>
+            <article class="lab-item reveal-card"><span>02</span><h3>Cisco IOS</h3><p>Configuring and managing Cisco networking devices through the command-line interface.</p></article>
+            <article class="lab-item reveal-card"><span>03</span><h3>Routing &amp; switching</h3><p>Building network topologies and diagnosing connectivity across their layers.</p></article>
+            <article class="lab-item reveal-card"><span>04</span><h3>Packet analysis</h3><p>Inspecting network traffic, packets, and protocol behaviour with Wireshark.</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section certifications" id="certifications" data-scene="certifications" data-section>
+        <div class="section__frame">
+          <header class="section-heading section-heading--wide">
+            <p class="section-kicker"><span>06</span> Certifications</p>
+            <h2 class="reveal-heading">Validated <span class="accent-text">learning.</span></h2>
+            <p class="section-intro">A record of focused coursework across cybersecurity, Linux, and network infrastructure.</p>
+          </header>
+          <div class="cert-grid">
+            <article class="cert-card reveal-card">
+              <div class="cert-card__top"><span class="cert-mark"><img src="./assets/certifications/fortinet.svg" alt="" onerror="this.hidden=true" /><b>FN</b></span><span class="cert-card__index">CRED / 01</span></div>
+              <p class="cert-card__issuer">Fortinet</p><h3>Fortinet NSE 1 Certified in Cybersecurity</h3>
+              <dl><div><dt>Issued</dt><dd>September 2026</dd></div><div><dt>Expires</dt><dd>September 2028</dd></div></dl>
+              <a href="https://www.credly.com/badges/cc1e94c2-1bfa-45ac-940b-f0fd72144f15/linked_in_profile" target="_blank" rel="noopener noreferrer">Verify credential</a>
+            </article>
+            <article class="cert-card reveal-card">
+              <div class="cert-card__top"><span class="cert-mark"><img src="./assets/certifications/cisco.svg" alt="" onerror="this.hidden=true" /><b>CS</b></span><span class="cert-card__index">CRED / 02</span></div>
+              <p class="cert-card__issuer">Cisco</p><h3>Introduction to Cybersecurity</h3>
+              <dl><div><dt>Issued</dt><dd>July 2026</dd></div><div><dt>Credential ID</dt><dd>6f99a058-a88d-45a9-94ef-9e66356598b6</dd></div></dl>
+              <a href="https://www.credly.com/badges/6f99a058-a88d-45a9-94ef-9e66356598b6/linked_in_profile" target="_blank" rel="noopener noreferrer">Verify credential</a>
+            </article>
+            <article class="cert-card reveal-card">
+              <div class="cert-card__top"><span class="cert-mark"><img src="./assets/certifications/cisco.svg" alt="" onerror="this.hidden=true" /><b>CS</b></span><span class="cert-card__index">CRED / 03</span></div>
+              <p class="cert-card__issuer">Cisco</p><h3>Linux Unhatched</h3><p class="cert-card__description">Introduction to Linux.</p>
+              <dl><div><dt>Issued</dt><dd>July 2026</dd></div><div><dt>Credential ID</dt><dd>3fec30ab-6815-493f-a84e-e565aa39ede7</dd></div></dl>
+              <a href="https://www.credly.com/badges/3fec30ab-6815-493f-a84e-e565aa39ede7/linked_in_profile" target="_blank" rel="noopener noreferrer">Verify credential</a>
+            </article>
+            <article class="cert-card cert-card--wide reveal-card">
+              <div class="cert-card__top"><span class="cert-mark"><img src="./assets/certifications/cisco.svg" alt="" onerror="this.hidden=true" /><b>CS</b></span><span class="cert-card__index">CRED / 04</span></div>
+              <p class="cert-card__issuer">Cisco Networking Academy</p><h3>Network Technician Career Path</h3>
+              <ul class="cert-card__skills"><li>Cisco IOS</li><li>Cisco Routers</li><li>Networking</li></ul>
+              <dl><div><dt>Issued</dt><dd>June 2026</dd></div><div><dt>Credential ID</dt><dd>680b851a-0bdb-4aa2-a700-f0c5781d3d5e</dd></div></dl>
+              <a href="https://www.credly.com/earner/earned/badge/680b851a-0bdb-4aa2-a700-f0c5781d3d5e" target="_blank" rel="noopener noreferrer">Verify credential</a>
+            </article>
+            <article class="cert-card reveal-card">
+              <div class="cert-card__top"><span class="cert-mark"><img src="./assets/certifications/nau.svg" alt="" onerror="this.hidden=true" /><b>NU</b></span><span class="cert-card__index">CRED / 05</span></div>
+              <p class="cert-card__issuer">Plataforma NAU</p><h3>Cidadão Ciberseguro</h3>
+              <dl><div><dt>Issued</dt><dd>January 2026</dd></div><div><dt>Credential ID</dt><dd>04b5206fda164a96b8dfef3833563755</dd></div></dl>
+              <a href="https://lms.nau.edu.pt/certificates/04b5206fda164a96b8dfef3833563755" target="_blank" rel="noopener noreferrer">Verify credential</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section projects" id="projects" data-scene="projects" data-section>
+        <div class="section__frame split-layout">
+          <header class="section-heading">
+            <p class="section-kicker"><span>07</span> Projects</p>
+            <h2 class="reveal-heading">Next node, <span class="muted">forming.</span></h2>
+            <p class="section-intro">This space is intentionally reserved for work that is still being prepared. No invented case studies — only work ready to be examined.</p>
+          </header>
+          <!-- FUTURE PROJECT: replace this article's title, copy, stack and links. -->
+          <article class="project-placeholder reveal-panel" data-project-slot>
+            <div class="project-placeholder__visual" aria-hidden="true"><span class="project-placeholder__orbit"></span><span class="project-placeholder__node"></span><span class="project-placeholder__scan"></span><small>AWAITING SIGNAL</small></div>
+            <div class="project-placeholder__copy"><p>Project 01 / Coming soon</p><h3>New cybersecurity / networking project currently being prepared.</h3><ul><li>Scope pending</li><li>Stack pending</li><li>Release pending</li></ul></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section contact" id="contact" data-scene="contact" data-section>
+        <div class="section__frame contact__frame">
+          <p class="section-kicker"><span>08</span> Contact</p>
+          <h2 class="contact__title reveal-heading">Let’s build<br /><span class="accent-text">secure systems.</span></h2>
+          <p class="contact__intro reveal-item">Interested in networks, security, and how systems really work. Let’s connect.</p>
+          <div class="contact-links reveal-panel">
+            <a href="#contact" data-profile-link="email"><span>Email</span><strong data-profile-value="email">[EMAIL]</strong><i>01</i></a>
+            <a href="#contact" data-profile-link="linkedin" target="_blank" rel="noopener noreferrer"><span>LinkedIn</span><strong data-profile-value="linkedin">[LINKEDIN_URL]</strong><i>02</i></a>
+            <a href="#contact" data-profile-link="github" target="_blank" rel="noopener noreferrer"><span>GitHub</span><strong data-profile-value="github">[GITHUB_URL]</strong><i>03</i></a>
+          </div>
+          <footer class="site-footer">
+            <p>© <span data-current-year>2026</span> <span data-profile-text="name">[MY NAME]</span></p>
+            <p>Computer Engineering / Cybersecurity / Networks</p>
+            <a href="#hero">Back to top</a>
+          </footer>
+        </div>
+      </section>
+    </main>
+    <script type="module" src="./src/main.js"></script>
+  </body>
 </html>
