@@ -2,9 +2,9 @@
 export const profile = {
   name: '[MY NAME]',
   initials: '[INITIALS]',
-  email: '[EMAIL]',
-  linkedin: '[LINKEDIN_URL]',
-  github: '[GITHUB_URL]',
+  email: 'miguelestrigaepic@gmail.com',
+  linkedin: 'https://www.linkedin.com/in/mestriga1',
+  github: 'https://github.com/estriga-001',
   location: '[LOCATION]',
 };
 
